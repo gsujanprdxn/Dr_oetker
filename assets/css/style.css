@@ -2,11 +2,11 @@
 
 /*------------------------------------------------------------------
   [Table of contents]
-  * To keep an overview of structure of your code, we make use of table of 
+  * To keep an overview of structure of your code, we make use of table of
   * content. Table of content is use display the overall tree structure of your
-  * Layout. 
+  * Layout.
   * (NOTE: Remove this commented code once you start developing the code.
-  * Remove the following table of content and add your own as this is just and 
+  * Remove the following table of content and add your own as this is just and
   * example to let you know)
 
   1. CSS Reset Code
@@ -31,9 +31,9 @@
 /*------------------------------------------------------------------
   [Color codes]
   * Mention the color code you have used in your html document for the respective
-  * elements given as follow. 
-  * (NOTE: Remove this commented code once you start developing the code. 
-  * Remove the following color code and add your own as this is just and 
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following color code and add your own as this is just and
   * example to let you know)
 
   Header nav: #e5e5df (Cararra)
@@ -45,8 +45,8 @@
   [Typography]
   * Mention the Typography you have used in your html document for the respective
   * elements given as follow.
-  * (NOTE: Remove this commented code once you start developing the code. 
-  * Remove the following typography and add your own as this is just and 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following typography and add your own as this is just and
   * example to let you know)
 
   Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -144,14 +144,379 @@ sub { bottom: -.25em; }
  * apply to the element wherever it is needed. If any single property in changed,
  * then override only that property in the particular class which is used for the
  * element.
- * (NOTE: Remove this commented code once you start 
+ * (NOTE: Remove this commented code once you start
  * developing the code. Remove the following font class and add your own
  * as this is just and example to let you know. If there is only one font family
  * followed throughout the site, then menstion the font property in body. No need
  * of creating an extra class for it) */
-
+/* 
 .futura-bold-font {
   font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
+}
+
+.wrapper{
+  position: relative;
+  width: 300px;
+  margin: 20px auto;
+  height: 600px;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  visibility: visible;
+  z-index: 2;
+  
+}
+
+#table{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+#logo{
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
+#plate{
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  animation-name: sonali;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  overflow: hidden;
+  animation-direction: alternate;
+  
+}
+
+#sadsonali{
+  position: absolute;
+  bottom: 93px;
+  right: 0px;
+  animation-name: sadsonali ;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  opacity: 0;
+}
+.container{
+  visibility: hidden;
+  z-index: 1;
+} */
+
+.wrapper{
+  width: 300px;
+  height: 600px;
+  margin: 20px auto;
+  border: 1px solid black;
+  background: url(/butter_assets/bg.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.logo{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 12%;
+}
+.table{
+  position: absolute;
+  bottom: -2%;
+}
+.plate{
+  position: absolute;
+  bottom: 0%;
+  left: -92%;
+  animation: plate 4s cubic-bezier(0.19, 0.69, 1, 1);
+}
+
+@keyframes plate{
+  0%{
+    bottom:1%;
+    left:-92%;
+  }
+  50%{
+    bottom:1%;
+    left:-15%;
+  }
+  100%{
+    bottom:1%;
+    left:-92%;
+  }
+}
+.sadsonali{
+  position: absolute;
+  bottom:13%;
+  right:-70%;
+  animation: sonali 4s cubic-bezier(0.19, 0.69, 1, 1) 1s;
+}
+@keyframes sonali{
+  0%{
+    bottom:13%;
+    right:-70%;
+  }
+  50%{
+    bottom:13%;
+    right: 0%;
+  }
+  100%{
+    bottom:13%;
+    right:-70%;
+  }
+}
+.text{
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  left: -23%;
+  font-size: 35px;
+  text-align: center;
+  color: rgb(237,28,36);
+  animation: text 4s cubic-bezier(0.19, 0.69, 1, 1) 1s;
+}
+.text2{
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  left: -45%;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(237,28,36);
+  animation: text2 4s cubic-bezier(0.19, 0.69, 1, 1) 4s;
+}
+@keyframes text{
+  0%{
+    top: 30%;
+    left: -45%;
+  }
+  50%{
+    top: 30%;
+    left: 50%;
+  }
+  100%{
+    top: 30%;
+    left: -45%;
+  }
+}
+@keyframes text2{
+  0%{
+    top: 30%;
+    left: -23%;
+  }
+  50%{
+    top: 30%;
+    left: 50%;
+  }
+  100%{
+    top: 30%;
+    left: -23%;
+  }
+}
+.sanwich_bottom{
+  position: absolute;
+  bottom: 1%;
+  bottom:1%;
+  left:-92%;
+  animation: sanwich_bottom 4s cubic-bezier(0.19, 0.69, 1, 1) 4s;
+}
+.sanwich_middle{
+  position: absolute;
+  bottom:4.5%;
+  left:-92%;
+  animation: sanwich_middle 4s cubic-bezier(0.19, 0.69, 1, 1) 4s;
+}
+.sanwich_top{
+  position: absolute;
+  bottom:7%;
+  left:-92%;
+  animation: sanwich_top 4s cubic-bezier(0.19, 0.69, 1, 1) 4s;
+}
+@keyframes sanwich_bottom{
+  0%{
+    bottom:1%;
+    left:-92%;
+  }
+  50%{
+    bottom:1%;
+    left:-12%;
+  }
+  100%{
+    bottom:1%;
+    left:-92%;
+  }
+}
+@keyframes sanwich_middle{
+  0%{
+    bottom:4.5%;
+    left:-92%;
+  }
+  50%{
+    bottom:4.5%;
+    left:0%;
+  }
+  100%{
+    bottom:4.5%;
+    left:-92%;
+  }
+}
+@keyframes sanwich_top{
+  0%{
+    bottom:7%;
+    left:-92%;
+  }
+  50%{
+    bottom:7%;
+    left:2%;
+  }
+  100%{
+    bottom:7%;
+    left:-92%;
+  }
+}
+.happy_sonali{
+  position: absolute;
+  bottom:15%;
+  right:-77%;
+  animation: happy_sonali 4s cubic-bezier(0.19, 0.69, 1, 1) 4s;
+}
+@keyframes happy_sonali{
+  0%{
+    bottom:15%;
+    right:-77%;
+  }
+  50%{
+    bottom:15%;
+    right: 0%;
+  }
+  100%{
+    bottom:15%;
+    right:-77%;
+  }
+}
+.chef{
+  position: absolute;
+  bottom:15%;
+  right:-80%;
+  animation: sonali 4s cubic-bezier(0.19, 0.69, 1, 1) 8s;
+}
+.text3{
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  left: -45%;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(237,28,36);
+  animation: text3 4s cubic-bezier(0.19, 0.69, 1, 1) 8s;
+}
+@keyframes text3{
+  0%{
+    top: 30%;
+    left: -23%;
+  }
+  50%{
+    top: 30%;
+    left: 50%;
+  }
+  100%{
+    top: 30%;
+    left: -23%;
+  }
+}
+.hat{
+  position: absolute;
+  bottom:15%;
+  right:-80%;
+  animation: hat 4s cubic-bezier(0.19, 0.69, 1, 1) 10s;
+  animation-fill-mode: forwards;
+}
+@keyframes hat{
+  0%{
+    bottom:60%;
+    left:-45%;
+  }
+  50%{
+    bottom:40%;
+    left:30%;
+  }
+  100%{
+    bottom:26%;
+    left:30%;
+  }
+}
+.veg_mayo{
+  position: absolute;
+  bottom:5%;
+  left:-37%;
+  animation: veg_mayo 2s cubic-bezier(0.19, 0.69, 1, 1) 10s;
+  animation-fill-mode: forwards;
+}
+@keyframes veg_mayo{
+  0%{
+    bottom:5%;
+    right:-37%;
+  }
+  100%{
+    bottom:5%;
+    left:28%;
+  }
+}
+
+.text4{
+  position: absolute;
+  width: 55%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  left: -45%;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(237,28,36);
+  animation: text4 4s cubic-bezier(0.19, 0.69, 1, 1) 12s;
+  animation-fill-mode: forwards;
+}
+@keyframes text4{
+  0%{
+    top: 30%;
+    left: -23%;
+  }
+  100%{
+    top: 30%;
+    left: 50%;
+  }
+}
+.button{
+  position: absolute;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid black;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 10px;
+  background-color: rgb(50, 50, 134);
+  top: 40%;
+  left: -50%;
+  animation: button 2s cubic-bezier(0.19, 0.69, 1, 1) 10s;
+  animation-fill-mode: forwards;
+}
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+@keyframes button{
+  0%{
+    top: 30%;
+    left: 10%;
+  }
+  100%{
+    top: 40%;
+    left: 50%;
+  }
 }
